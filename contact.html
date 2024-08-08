@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Get In Touch</p>
+        </div>
+        <div class="container">
+            <div class="contactinfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p style="color: black;">jamadoba barkitand jitpur road,<br>near shama general store dhanbad,<br>828309</p>
+
+                        </div>
+                    </div>
+                
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>phone</h3>
+                            <p style="color: black;">9693552547</p>
+
+                        </div>
+                    </div>
+                
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p style="color: black;">saimaparween11@gmail.com</p>
+
+                        </div>
+                    </div>
+                
+
+            </div>
+            <div class="contactform">
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <h2>send Message</h2>
+                    <div class="inputbox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="" required="required">
+                        <span>Phone.no</span>
+                    </div>
+                    <div class="inputbox">
+                        <textarea required="required"></textarea>
+                        <span>Type your message....</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="submit" name="" value="send" >
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+    Host : "smtp.email.com",
+    Username : "saimaparween11@gmail.com",
+    Password : "saima@9693",
+    To : "smirakhan061@gmail.com",
+    From :document.getElementById("email").value,
+    Subject :"New Contact Form Enquiry" ,
+    Body : "Full Name:" + document.getElementById("Full Name").value
+    +"<br>Email:" + document.getElementById("Email").value
+    +"<br>Phone.no:" + document.getElementById("Phone.no").value
+    +"<br>Type your message....:" + document.getElementById("Type your message....").value
+}).then(
+  message => alert("message sent succesfully")
+);
+
+        }
+    </script>
+</body>
+</html>

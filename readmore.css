@@ -1,0 +1,36 @@
+body{
+    background-color: lightblue;
+    color: black;
+    font-family: 'poppins',sans-serif;
+}
+
+.head{
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    font-weight: 500;
+}
+.head ul{
+    padding: 0;
+    list-style-position: inside;
+}
+.head3{
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    font-weight: 500;
+}
+.head3 ul{
+    padding: 0;
+    list-style-position: inside;
+}
+.head4{
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    font-weight: 500;
+}
+.head4 ul{
+    padding: 0;
+    list-style-position: inside;
+}
